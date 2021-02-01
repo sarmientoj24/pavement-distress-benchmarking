@@ -73,10 +73,10 @@ def main():
         root = tree.getroot()
         
         i = 0
-        imageFile = filePath[:-4].replace("annotations","images")+"."+imageType[i]
+        imageFile = filePath[:-4].replace("labels","images")+"."+imageType[i]
         while (not os.path.isfile(imageFile) and i<2):
             i+=1
-            imageFile = filePath[:-4].replace("annotations","images")+"."+imageType[i]
+            imageFile = filePath[:-4].replace("labels","images")+"."+imageType[i]
 
         if not os.path.isfile(imageFile):
             print("File not found:",imageFile)
