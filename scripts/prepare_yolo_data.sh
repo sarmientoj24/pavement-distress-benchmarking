@@ -13,8 +13,8 @@ cp data/val/annotations/*.xml yolo_data/labels/val
 
 pip install pillow
 
-python utils/xml2yolo.py --classes $(pwd)/artifacts/damage_list.txt --anns $(pwd)/yolo_data/val/annotations
-python utils/xml2yolo.py --classes $(pwd)/artifacts/damage_list.txt --anns $(pwd)/yolo_data/train/annotations
+python utils/xml2yolo.py --classes $(pwd)/artifacts/damage_list.txt --anns $(pwd)/yolo_data/labels/val/
+python utils/xml2yolo.py --classes $(pwd)/artifacts/damage_list.txt --anns $(pwd)/yolo_data/labels/train
 
-rm $(pwd)/yolo_data/val/annotations/*.xml
-rm $(pwd)/yolo_data/train/annotations/*.xml
+rm $(pwd)/yolo_data/labels/val/*.xml
+rm $(pwd)/yolo_data/labels/train/*.xml
