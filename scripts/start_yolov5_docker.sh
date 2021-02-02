@@ -5,4 +5,4 @@ cp artifacts/rddc.yaml yolo_data/
 docker pull ultralytics/yolov5:latest
 
 # Run docker interactively
-docker run --gpus all --ipc=host -it -v "$(pwd)"/yolo_data:/usr/src/data ultralytics/yolov5:latest
+nvidia-docker run --ipc=host -it -v "$(pwd)"/yolo_data:/usr/src/app/yolo_data ultralytics/yolov5:latest
