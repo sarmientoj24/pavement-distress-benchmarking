@@ -135,3 +135,6 @@ def main():
         output_jsonpath=args.output,
         extract_num_from_imgid=False
     )
+
+if __name__ == '__main__':
+    main()
