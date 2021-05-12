@@ -1,6 +1,16 @@
 # pavement-distress-benchmarking
 Repository for Benchmarking Pavement Distress Detection
 
+## Tools:
+- Docker: Training and testing without the hassle of reinstalling and affecting the environment
+- Pytorch: weapon of choice for most DL tasks
+- Pytorch Lightning: makes Pytorch a little bit easier to maintain
+- OpenCV: image manipulation, processing, CLAHE, etc.
+- YOLOv5, mmdetection, detectron: libraries with model Zoo and easy to use interface for training
+- and a looot of bash scripting to automate the testing and retrieval of data.
+
+This is trained on a server with a GPU but prototyped on Google Colab to save some $$$
+
 ## Training with YOLOv5
 ### Setup Mayon Environment
 ```
@@ -31,3 +41,20 @@ pip install wandb
 wandb login <api-key>
 python train.py --img 512 --batch 64 --epochs 100 --data rddc.yaml --weights yolov5m.pt
 ```
+
+# Colab Notebooks Guide
+For object detection baselines, I have used YOLOv5, mmdetection, and detectron2 as Object Detection Libraries. I also had adopted and modified a code for Faster-RCNN that uses Pytorch Lightning. All notebooks are working on Google Colab. I also included DeepLabV3 (for segmentation) since I have used it before.  
+
+**All notebooks have sections and are organized although there might be some extra logs.**
+
+**Faster_RCNN_PytorchLightning.ipynb**  
+  Uses Pytorch + Pytorch Lightning to train an object detector for a dataset by Murad et. al
+
+**Faster_RCNN_using_Detectron2.ipynb  **
+  Uses Detectron2 to build a Faster-RCNN object detection model. Fewer lines of code than the first one but a little bit less flexible. Easier training with Docker.
+  
+**RetinaNet_using_Detectron2.ipynb**  
+  Uses Detectron2's RetinaNet to train model
+
+**DeepLabV3.ipynb**
+  Adopted code for DeepLabV3 using Pytorch
