@@ -7,6 +7,7 @@ Repository for Benchmarking Pavement Distress Detection
 - Pytorch Lightning: makes Pytorch a little bit easier to maintain
 - OpenCV: image manipulation, processing, CLAHE, etc.
 - YOLOv5, mmdetection, detectron: libraries with model Zoo and easy to use interface for training
+- wandb: tracking training online
 - and a looot of bash scripting to automate the testing and retrieval of data.
 
 This is trained on a server with a GPU but prototyped on Google Colab to save some $$$
