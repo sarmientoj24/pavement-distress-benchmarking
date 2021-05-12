@@ -51,11 +51,11 @@ For object detection baselines, I have used YOLOv5, mmdetection, and detectron2 
 **Faster_RCNN_PytorchLightning.ipynb**  
   Uses Pytorch + Pytorch Lightning to train an object detector for a dataset by Murad et. al
 
-**Faster_RCNN_using_Detectron2.ipynb  **
+**Faster_RCNN_using_Detectron2.ipynb**  
   Uses Detectron2 to build a Faster-RCNN object detection model. Fewer lines of code than the first one but a little bit less flexible. Easier training with Docker.
   
-**RetinaNet_using_Detectron2.ipynb**  
+**RetinaNet_using_Detectron2.ipynb**    
   Uses Detectron2's RetinaNet to train model
 
-**DeepLabV3.ipynb**
+**DeepLabV3.ipynb**  
   Adopted code for DeepLabV3 using Pytorch
